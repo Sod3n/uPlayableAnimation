@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.Playables;
+using Zenject;
 
 namespace UPlayable.AnimationMixer
 {
@@ -24,6 +25,9 @@ namespace UPlayable.AnimationMixer
 
         }
 
+        [Inject] protected AnimationMixerManager m_manager;
+        [Inject] protected Animator m_animator;
+
         [SerializeField]
         protected int LayerIndex = 0;
         [SerializeField]
@@ -33,10 +37,8 @@ namespace UPlayable.AnimationMixer
         [SerializeField]
         protected ClipTransitionSetting TransitionSetting = new ClipTransitionSetting();
         protected AnimationOutputModel m_model;
-        protected AnimationMixerManager m_manager;
         protected int m_Id = -1;
         protected abstract Playable m_managerInput { get; }
-        protected Animator m_animator;
         public int Id => m_Id;
         public float BaseSpeed
         {
@@ -45,8 +47,6 @@ namespace UPlayable.AnimationMixer
 
         private void Start()
         {
-            m_manager = GetComponentInParent<AnimationMixerManager>();
-            m_animator = GetComponentInParent<Animator>();
             ParseSettingToModel();
             if (IsStatic)
             {
