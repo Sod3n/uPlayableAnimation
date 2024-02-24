@@ -14,16 +14,21 @@ namespace UPlayable.AnimationMixer
 
         protected override void ParseSettingToModel()
         {
+            var speed = TransitionSetting.ClipSpeed;
+            var clipLength = ToClip != null ? ToClip.length : -1;
+
+            if (!TransitionSetting.UseClipDuration) speed *= clipLength / TransitionSetting.ClipDuration;
+
             m_model = new AnimationOutputModel
             {
                 IsAnimatorPlayable = false,
-                ClipLength = ToClip != null ? ToClip.length : -1,
+                ClipLength = clipLength,
                 OutputTargetWeight = TransitionSetting.OutputTargetWeight,
                 FadeInTime = TransitionSetting.FadeInTime,
                 ExitTime = TransitionSetting.ExitTime,
                 FixedTimeOffset = TransitionSetting.FixedTimeOffset,
                 RestartWhenPlay = TransitionSetting.RestartWhenPlay,
-                Speed = TransitionSetting.ClipSpeed,
+                Speed = speed,
             };
         }
 

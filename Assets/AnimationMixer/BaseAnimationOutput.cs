@@ -18,6 +18,8 @@ namespace UPlayable.AnimationMixer
             [Tooltip("Transition to other animation will be banned for ExitTime seconds")]
             public float ExitTime;
             public float ClipSpeed = 1;
+            public bool UseClipDuration = true;
+            public float ClipDuration = 1;
             [Header("(non-static clip will always restart, which will ignore this flag)")]
             [Tooltip("If the animation needs to restart when Play execute")]
             public bool RestartWhenPlay;
