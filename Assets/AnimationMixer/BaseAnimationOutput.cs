@@ -67,6 +67,17 @@ namespace UPlayable.AnimationMixer
             }
         }
 
+        public void SetDuration(float duration)
+        {
+            TransitionSetting.UseDefaultClipDuration = false;
+            TransitionSetting.ClipDuration = duration;
+            ParseSettingToModel();
+            if (m_Id != -1 && IsStatic)
+            {
+                m_manager.UpdateInputModel(m_Id, m_model, LayerIndex);
+            }
+        }
+
         public void SetFixedTimeOffset(float fixedTimeOffset)
         {
             TransitionSetting.FixedTimeOffset = fixedTimeOffset;
