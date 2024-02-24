@@ -58,6 +58,7 @@ namespace UPlayable.AnimationMixer
         private float m_weightDiffThisFrame;
         private Queue<int> m_recycledIndexes = new Queue<int>();
         private bool m_hasStatic;
+        private bool m_onEndInvoked;
 
         public void SetRootPlayable(AnimationMixerPlayable playable)
         {
@@ -135,6 +136,7 @@ namespace UPlayable.AnimationMixer
             if (m_layeredPlayablesMap.Keys.Count > 1)
             {
                 LastPlayableInPlayer = CurrentPlayableIdInLayer;
+                InvokeOnEnd();
             }
             else
             {
@@ -150,11 +152,16 @@ namespace UPlayable.AnimationMixer
             m_layeredPlayablesMap[id].Playable.SetSpeed(m_layeredPlayablesMap[id].BaseSpeed);
             m_layeredPlayablesMap[id].Playable.SetDuration(m_layeredPlayablesMap[id].ClipLength);
             m_remainExitTime = m_layeredPlayablesMap[id].ExitTime;
+            m_onEndInvoked = false;
         }
 
         public void InvokeOnEnd()
         {
             if (m_layeredPlayables.Count == 0) return;
+
+            if (m_onEndInvoked) return;
+
+            m_onEndInvoked = true;
 
             m_layeredPlayablesMap[CurrentPlayableIdInLayer].OnEnd?.Invoke();
         }
