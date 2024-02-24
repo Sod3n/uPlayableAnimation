@@ -17,7 +17,7 @@ namespace UPlayable.AnimationMixer
             var speed = TransitionSetting.ClipSpeed;
             var clipLength = ToClip != null ? ToClip.length : -1;
 
-            if (!TransitionSetting.UseClipDuration) speed *= clipLength / TransitionSetting.ClipDuration;
+            if (!TransitionSetting.UseDefaultClipDuration) speed *= clipLength / TransitionSetting.ClipDuration;
 
             m_model = new AnimationOutputModel
             {
