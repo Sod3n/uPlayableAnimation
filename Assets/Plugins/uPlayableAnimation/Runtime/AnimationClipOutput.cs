@@ -36,12 +36,6 @@ namespace UPlayable.AnimationMixer
             m_toPlayable.SetTime(0f);
             m_Id = m_toPlayable.GetHashCode();
         }
-
-        protected override void Start()
-        {
-            base.Start();
-            OnEnd += () => Debug.Log("End");
-        }
     }
 
 }
