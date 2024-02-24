@@ -148,13 +148,6 @@ namespace UPlayable.AnimationMixer
             m_remainExitTime = m_layeredPlayablesMap[id].ExitTime;
         }
 
-        public void InvokeOnEnd()
-        {
-            if (m_layeredPlayables.Count == 0) return;
-
-            m_layeredPlayablesMap[CurrentPlayableIdInLayer].OnEnd?.Invoke();
-        }
-
         public bool IsCurrentPlayableCompleted()
         {
             if (m_layeredPlayables.Count == 0)
