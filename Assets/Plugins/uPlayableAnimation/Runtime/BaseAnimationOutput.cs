@@ -45,7 +45,7 @@ namespace UPlayable.AnimationMixer
             get { return TransitionSetting.ClipSpeed; }
         }
 
-        private void Start()
+        protected virtual void Start()
         {
             ParseSettingToModel();
             if (IsStatic)
