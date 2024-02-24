@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ namespace UPlayable.AnimationMixer
     public class AnimationClipOutput : BaseAnimationOutput
     {
         public AnimationClip ToClip;
+        public event Action OnEnd;
         private AnimationClipPlayable m_toPlayable;
         protected override Playable m_managerInput => m_toPlayable;
 
@@ -24,6 +26,7 @@ namespace UPlayable.AnimationMixer
                 FixedTimeOffset = TransitionSetting.FixedTimeOffset,
                 RestartWhenPlay = TransitionSetting.RestartWhenPlay,
                 Speed = TransitionSetting.ClipSpeed,
+                OnEnd = () => OnEnd?.Invoke(),
             };
         }
 
@@ -32,6 +35,12 @@ namespace UPlayable.AnimationMixer
             m_toPlayable = AnimationClipPlayable.Create(m_manager.PlayableGraph, ToClip);
             m_toPlayable.SetTime(0f);
             m_Id = m_toPlayable.GetHashCode();
+        }
+
+        protected override void Start()
+        {
+            base.Start();
+            OnEnd += () => Debug.Log("End");
         }
     }
 

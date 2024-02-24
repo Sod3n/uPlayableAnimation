@@ -43,7 +43,7 @@ namespace UPlayable.AnimationMixer
             get { return TransitionSetting.ClipSpeed; }
         }
 
-        private void Start()
+        protected virtual void Start()
         {
             m_manager = GetComponentInParent<AnimationMixerManager>();
             m_animator = GetComponentInParent<Animator>();

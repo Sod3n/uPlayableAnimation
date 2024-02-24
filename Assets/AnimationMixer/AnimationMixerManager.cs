@@ -19,6 +19,7 @@ namespace UPlayable.AnimationMixer
         public float Speed;
         [Header("(non-static clip will always restart)")]
         public bool RestartWhenPlay;
+        public Action OnEnd;
     }
 
     public enum PlayableInputType
@@ -43,6 +44,7 @@ namespace UPlayable.AnimationMixer
         public bool IsAnimatorPlayable;
         public float ClipLength;
         public float BaseSpeed;
+        public Action OnEnd;
     }
 
     public class LayeredPlayablesController
@@ -81,6 +83,7 @@ namespace UPlayable.AnimationMixer
                 ClipLength = model.ClipLength,
                 IsAnimatorPlayable = model.IsAnimatorPlayable,
                 BaseSpeed = model.Speed,
+                OnEnd = model.OnEnd,
             };
             m_layeredPlayables.Add(runtimeData);
             m_layeredPlayablesMap.Add(id, runtimeData);
@@ -115,6 +118,7 @@ namespace UPlayable.AnimationMixer
                     Type = PlayableInputType.Dynamic,
                     OccupiedInputIndex = portIndex,
                     BaseSpeed = model.Speed,
+                    OnEnd = model.OnEnd,
                 };
                 m_layeredPlayables.Add(runtimeData);
                 m_layeredPlayablesMap.Add(id, runtimeData);
@@ -146,6 +150,13 @@ namespace UPlayable.AnimationMixer
             m_layeredPlayablesMap[id].Playable.SetSpeed(m_layeredPlayablesMap[id].BaseSpeed);
             m_layeredPlayablesMap[id].Playable.SetDuration(m_layeredPlayablesMap[id].ClipLength);
             m_remainExitTime = m_layeredPlayablesMap[id].ExitTime;
+        }
+
+        public void InvokeOnEnd()
+        {
+            if (m_layeredPlayables.Count == 0) return;
+
+            m_layeredPlayablesMap[CurrentPlayableIdInLayer].OnEnd?.Invoke();
         }
 
         public bool IsCurrentPlayableCompleted()
@@ -409,6 +420,7 @@ namespace UPlayable.AnimationMixer
                 if (m_layerControllers[i].IsCurrentPlayableCompleted())
                 {
                     m_targetLayerWeight[i] = 0;
+                    m_layerControllers[i].InvokeOnEnd();
                 }
                 else
                 {
