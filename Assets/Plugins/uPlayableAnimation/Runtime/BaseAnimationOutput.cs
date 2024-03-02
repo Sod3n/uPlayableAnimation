@@ -5,7 +5,6 @@ using Zenject;
 
 namespace UPlayable.AnimationMixer
 {
-    [RequireComponent(typeof(AnimationMixerManager))]
     public abstract class BaseAnimationOutput : MonoBehaviour
     {
         [System.Serializable]
