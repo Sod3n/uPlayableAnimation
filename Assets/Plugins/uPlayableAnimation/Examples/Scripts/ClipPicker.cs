@@ -8,7 +8,7 @@ namespace UPlayable.AnimationMixer.Example
     public class ClipPicker : MonoBehaviour
     {
         private int index;
-        public PlayClip Target;
+        public AnimationClipOutput Target;
         public AnimationClip[] Clips;
         public bool AutoChange;
         private float elapsedTime;

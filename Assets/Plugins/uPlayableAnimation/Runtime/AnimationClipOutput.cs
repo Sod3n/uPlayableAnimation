@@ -7,7 +7,7 @@ using UnityEngine.Playables;
 
 namespace UPlayable.AnimationMixer
 {
-    public class PlayClip : BaseAnimationOutput
+    public class AnimationClipOutput : BaseAnimationOutput
     {
         public AnimationClip ToClip;
         public event Action OnEnd;
