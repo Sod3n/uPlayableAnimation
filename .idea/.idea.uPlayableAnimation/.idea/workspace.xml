@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7c176238-2cff-4d47-be79-a85d9d77c8fd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.uPlayableAnimation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.uPlayableAnimation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Zenject.csproj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Examples/Scripts/ClipPicker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Examples/Scripts/ClipPicker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Runtime/AnimationClipOutput.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Runtime/AnimationClipOutput.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Examples/Scenes/9_FPS_Speed_Compare.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Examples/Scenes/9_FPS_Speed_Compare.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Runtime/AnimationMixerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Runtime/AnimationMixerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Runtime/PlayClip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Runtime/PlayClip.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,12 +18,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://I:/GitHub/uPlayableAnimation/Assets/AnimationMixer/AnimationClipOutput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://I:/GitHub/uPlayableAnimation/Assets/AnimationMixer/AnimationClipOutput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://I:/GitHub/uPlayableAnimation/Assets/AnimationMixer/AnimationClipOutput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://I:/GitHub/uPlayableAnimation/Assets/AnimationMixer/AnimationMixerManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://I:/GitHub/uPlayableAnimation/Assets/AnimationMixer/AnimationMixerManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://I:/GitHub/uPlayableAnimation/Assets/AnimationMixer/AnimationMixerManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://I:/GitHub/uPlayableAnimation/Assets/Plugins/uPlayableAnimation/Examples/Scenes/9_FPS_Speed_Compare.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://I:/GitHub/uPlayableAnimation/Assets/Plugins/uPlayableAnimation/Runtime/AnimationMixerManager.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2Q9CUq9G0GgasPYje1g8dIEnUGr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,7 +45,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main-extenject",
+    "git-widget-placeholder": "Merging main-extenject",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -100,12 +110,14 @@
       <updated>1684756431349</updated>
       <workItem from="1684756438347" duration="2204000" />
       <workItem from="1709956650111" duration="201000" />
+      <workItem from="1709959768603" duration="787000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
