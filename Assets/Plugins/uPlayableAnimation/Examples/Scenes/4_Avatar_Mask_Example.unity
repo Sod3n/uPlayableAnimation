@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5077,7 +5077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7252b345e69f9439e871e0102cb078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LayerIndex: 1
+  LayerIndex: 2
   AvatarMask: {fileID: 31900000, guid: ea9413c66355fe9429ba9e244d06d9e6, type: 2}
   IsStatic: 0
   TransitionSetting:
@@ -5087,7 +5087,7 @@ MonoBehaviour:
     ExitTime: 0
     ClipSpeed: 1
     RestartWhenPlay: 0
-  ToClip: {fileID: 0}
+  ToClip: {fileID: 7400000, guid: 26055e26f15260e4e8e0e51f50c41926, type: 3}
 --- !u!114 &1355516688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5120,9 +5120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7252b345e69f9439e871e0102cb078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LayerIndex: 0
-  AvatarMask: {fileID: 0}
-  IsStatic: 1
+  LayerIndex: 1
+  AvatarMask: {fileID: 31900000, guid: ea9413c66355fe9429ba9e244d06d9e6, type: 2}
+  IsStatic: 0
   TransitionSetting:
     OutputTargetWeight: 1
     FadeInTime: 0.2
