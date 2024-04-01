@@ -173,6 +173,11 @@ namespace UPlayable.AnimationMixer
             m_layeredPlayablesMap[CurrentPlayableIdInLayer].OnEnd?.Invoke();
         }
 
+        public void Pause(int id)
+        {
+            m_layeredPlayablesMap[id].Playable.Pause();
+        }
+
         public bool IsCurrentPlayableCompleted()
         {
             if (m_layeredPlayables.Count == 0)
@@ -391,6 +396,11 @@ namespace UPlayable.AnimationMixer
         public void Play(int id, bool force = false, int layerIndex = 0)
         {
             m_layerControllers[layerIndex].Play(id, force);
+        }
+
+        public void Pause(int id, int layerIndex = 0)
+        {
+            m_layerControllers[layerIndex].Pause(id);
         }
         public bool IsCurrentPlayable(int id, int layerIndex = 0)
         {

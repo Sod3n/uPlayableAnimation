@@ -116,5 +116,10 @@ namespace UPlayable.AnimationMixer
                 m_manager.SetLayerAvatarMask((uint)LayerIndex, AvatarMask);
             }
         }
+
+        public void Pause()
+        {
+            m_manager.Pause(m_Id, LayerIndex);
+        }
     }
 }

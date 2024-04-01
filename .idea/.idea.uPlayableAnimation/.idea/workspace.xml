@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="7c176238-2cff-4d47-be79-a85d9d77c8fd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.uPlayableAnimation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.uPlayableAnimation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Examples/Scenes/9_FPS_Speed_Compare.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Examples/Scenes/9_FPS_Speed_Compare.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Runtime/AnimationMixerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Runtime/AnimationMixerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Runtime/PlayClip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Runtime/PlayClip.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Runtime/BaseAnimationOutput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Runtime/BaseAnimationOutput.cs" afterDir="false" />
     </list>
-=======
-    <list default="true" id="7c176238-2cff-4d47-be79-a85d9d77c8fd" name="Changes" comment="" />
->>>>>>> parent of c5a8ef9... rename animationclipoutput to playclip
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,25 +18,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://I:/GitHub/uPlayableAnimation/Assets/AnimationMixer/AnimationClipOutput.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://I:/GitHub/uPlayableAnimation/Assets/AnimationMixer/AnimationClipOutput.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://I:/GitHub/uPlayableAnimation/Assets/AnimationMixer/AnimationClipOutput.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://I:/GitHub/uPlayableAnimation/Assets/AnimationMixer/AnimationMixerManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://I:/GitHub/uPlayableAnimation/Assets/AnimationMixer/AnimationMixerManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://I:/GitHub/uPlayableAnimation/Assets/AnimationMixer/AnimationMixerManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://I:/GitHub/uPlayableAnimation/Assets/Plugins/uPlayableAnimation/Examples/Scenes/9_FPS_Speed_Compare.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://I:/GitHub/uPlayableAnimation/Assets/Plugins/uPlayableAnimation/Runtime/AnimationMixerManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/434bee9492f844d2b1ea500ebe8c963826e00/93/4b708086/AnimationLayerMixerPlayable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/4d/4a646461/PlayableExtensions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-<<<<<<< HEAD
-  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
-}</component>
-=======
->>>>>>> parent of c5a8ef9... rename animationclipoutput to playclip
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 8
+}]]></component>
   <component name="ProjectId" id="2Q9CUq9G0GgasPYje1g8dIEnUGr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -52,28 +38,25 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-<<<<<<< HEAD
-    "git-widget-placeholder": "Merging main-extenject",
-=======
-    "git-widget-placeholder": "main",
->>>>>>> parent of c5a8ef9... rename animationclipoutput to playclip
+    "git-widget-placeholder": "fix-layers-adding",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\erich\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\erich\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\erich\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\danso\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\danso\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\danso\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Unity\2021.3.20f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="I:\Programms\2021.3.20f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\UnityProject\uPlayableAnimation -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\UnityProject\uPlayableAnimation" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -81,7 +64,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Unity\2021.3.20f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="I:\Programms\2021.3.20f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\UnityProject\uPlayableAnimation -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\UnityProject\uPlayableAnimation" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -118,18 +101,13 @@
       <option name="presentableId" value="Default" />
       <updated>1684756431349</updated>
       <workItem from="1684756438347" duration="2204000" />
-<<<<<<< HEAD
-      <workItem from="1709956650111" duration="201000" />
-      <workItem from="1709959768603" duration="787000" />
-=======
->>>>>>> parent of c5a8ef9... rename animationclipoutput to playclip
+      <workItem from="1711976254607" duration="233000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
