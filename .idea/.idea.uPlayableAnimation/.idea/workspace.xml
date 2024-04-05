@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7c176238-2cff-4d47-be79-a85d9d77c8fd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.uPlayableAnimation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.uPlayableAnimation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Runtime/AnimationMixerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Runtime/AnimationMixerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Runtime/BaseAnimationOutput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/uPlayableAnimation/Runtime/BaseAnimationOutput.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,10 +22,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2Q9CUq9G0GgasPYje1g8dIEnUGr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -38,7 +36,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "fix-layers-adding",
+    "git-widget-placeholder": "main-extenject",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -101,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1684756431349</updated>
       <workItem from="1684756438347" duration="2204000" />
-      <workItem from="1711976254607" duration="233000" />
+      <workItem from="1711976254607" duration="1115000" />
     </task>
     <servers />
   </component>
