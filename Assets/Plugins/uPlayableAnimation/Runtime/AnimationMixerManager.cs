@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.Playables;
@@ -100,6 +101,12 @@ namespace UPlayable.AnimationMixer
             if (m_remainExitTime <= 0)
             {
                 var id = playable.GetHashCode();
+
+
+                if (m_layeredPlayables.Count > 9)
+                    RemovePlayable(ref graph, 0);
+                
+                
                 var portIndex = m_recycledIndexes.Count > 0 ? m_recycledIndexes.Dequeue() : m_layeredPlayables.Count;
                 if (portIndex > m_rootPlayable.GetInputCount() - 1)
                 {
@@ -125,6 +132,7 @@ namespace UPlayable.AnimationMixer
                     BaseSpeed = model.Speed,
                     OnEnd = model.OnEnd,
                 };
+                
                 m_layeredPlayables.Add(runtimeData);
                 m_layeredPlayablesMap.Add(id, runtimeData);
                 graph.Connect(playable, 0, m_rootPlayable, portIndex);
@@ -258,23 +266,31 @@ namespace UPlayable.AnimationMixer
             }
         }
 
+        private void RemovePlayable(ref PlayableGraph graph, int index)
+        {
+            var p = m_layeredPlayables[index];
+            if (p.Id == LastPlayableInPlayer)
+            {
+                LastPlayableInPlayer = -1;
+            }
+
+            m_recycledIndexes.Enqueue(p.OccupiedInputIndex);
+            graph.Disconnect(m_rootPlayable, p.OccupiedInputIndex);
+            m_layeredPlayablesMap.Remove(p.Id);
+            graph.DestroyPlayable(p.Playable);
+            m_layeredPlayables.RemoveAt(index);
+        }
+        
         public void OnPostUpdate(ref PlayableGraph graph)
         {
             for (int i = m_layeredPlayables.Count - 1; i >= 0; i--)
             {
                 var p = m_layeredPlayables[i];
-                if (m_layeredPlayables[i].Id != CurrentPlayableIdInLayer && p.Type == PlayableInputType.Dynamic && p.Weight < 0.001f && m_layeredPlayablesMap[CurrentPlayableIdInLayer].SmoothWeight > 0.99f)
+                if (p.Id != CurrentPlayableIdInLayer
+                    && p.Type == PlayableInputType.Dynamic
+                    && p.Weight < 0.001f && m_layeredPlayablesMap[CurrentPlayableIdInLayer].SmoothWeight > 0.99f)
                 {
-                    if (m_layeredPlayables[i].Id == LastPlayableInPlayer)
-                    {
-                        LastPlayableInPlayer = -1;
-                    }
-
-                    m_recycledIndexes.Enqueue(p.OccupiedInputIndex);
-                    graph.Disconnect(m_rootPlayable, p.OccupiedInputIndex);
-                    m_layeredPlayablesMap.Remove(m_layeredPlayables[i].Id);
-                    graph.DestroyPlayable(m_layeredPlayables[i].Playable);
-                    m_layeredPlayables.RemoveAt(i);
+                    RemovePlayable(ref graph, i);
                 }
             }
         }
